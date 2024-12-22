@@ -1,0 +1,14 @@
+type Profile = 
+ record {
+   email: text;
+   profilePicUrl: text;
+   username: text;
+ };
+service : {
+  getLoggedInUser: () -> (text);
+  getLoginStatus: () -> (bool);
+  getProfile: () -> (Profile);
+  login: (text) -> (text);
+  logout: () -> (text);
+  updateProfile: (text, text, text) -> (text);
+}
